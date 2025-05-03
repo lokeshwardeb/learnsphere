@@ -2,7 +2,7 @@
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{-- {{ __('Dashboard') }} --}}
-            Welcome back, {{ Auth::user()->name }}
+            Welcome back, {{ Auth::user()->name }} The role is : {{Auth::user()->role}}
         </h2>
     </x-slot>
 
@@ -14,6 +14,7 @@
 
                     {{-- Hello safu diii !! --}}
 
+                    @if (Auth::user()->role == 'student')
                     <div class="grid grid-rows-2 gap-4 m-auto justify-center sm:grid-rows-none sm:grid-cols-2 ">
                         <div class="">
                             <a href="">
@@ -35,6 +36,20 @@
                         </div>
                     
                       </div>
+
+                      @else
+                        {{-- if the if condition doesnot meet up then execute the following code --}}
+                        <div class="text-red-600">
+                            The user is not student
+                        </div>
+
+                    @endif
+
+            
+                    
+                  
+
+                    
 
 
 
