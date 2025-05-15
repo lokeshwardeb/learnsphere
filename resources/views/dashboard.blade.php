@@ -2,7 +2,7 @@
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{-- {{ __('Dashboard') }} --}}
-            Welcome back, {{ Auth::user()->name }} The role is : {{Auth::user()->role}}
+            Welcome back, {{ Auth::user()->name }} The role is : {{ Auth::user()->role }}
         </h2>
     </x-slot>
 
@@ -15,41 +15,26 @@
                     {{-- Hello safu diii !! --}}
 
                     @if (Auth::user()->role == 'student')
-                    <div class="grid grid-rows-2 gap-4 m-auto justify-center sm:grid-rows-none sm:grid-cols-2 ">
-                        <div class="">
-                            <a href="">
-                                {{-- <button class="bg-green-600 text-white p-2 rounded-xl hover:bg-black transition ease-linear delay-75 ">Submit Assignment</button>
-                                <button class="bg-green-600 text-white p-2 rounded-xl hover:bg-white hover:text-green-600 hover:border-1 hover:border-green-600 hover:border transition ease-linear delay-75 ">Submit Assignment</button>
-                                <button class="bg-green-600 text-white p-2 rounded-xl hover:bg-green-700 transition ease-linear delay-75 ">Submit Assignment</button> --}}
-
-
-                                <button class="bg-green-600 text-white p-2 rounded-xl hover:bg-white hover:text-green-600 hover:border-1 hover:border-green-600 hover:border transition ease-linear delay-75 ">Submit Assignment</button>
-
-                                
-                            </a>
-                        </div>
-                        
-                        <div>
-                            <a href="">
-                                <button class="bg-white border border-1 border-black text-black p-2 rounded-xl hover:bg-black hover:text-white transition ease-linear delay-75 ">Class Schedule</button>
-                            </a>
-                        </div>
+                        @include('student.index')
                     
-                      </div>
+                    @elseif (Auth::user()->role == 'teacher')
+                        @include('teacher.index')
 
-                      @else
+                    @else
                         {{-- if the if condition doesnot meet up then execute the following code --}}
                         <div class="text-red-600">
                             The user is not student
                         </div>
-
                     @endif
 
-            
                     
-                  
 
                     
+
+
+
+
+
 
 
 

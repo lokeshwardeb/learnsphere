@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.myclassname{
+    background-color: red !important;
+}
+/* .fc-day-today{
+    background-color: green !important;
+    color: white !important;
+} */
