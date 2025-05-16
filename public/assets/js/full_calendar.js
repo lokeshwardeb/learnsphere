@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 textcolor: '#ddd',
                 // color: '#ff9f89', // Light red
                 // eventClassNames: [ 'myclassname', 'otherclassname' ]
-                editable: true,
+                editable: false,
             },
             {
                 title: 'event3',
