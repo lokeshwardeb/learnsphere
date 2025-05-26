@@ -9,3 +9,28 @@
     background-color: green !important;
     color: white !important;
 } */
+
+
+
+.btn_outline_success_1{
+    @apply bg-green-600 text-white p-2 rounded-xl hover:bg-white hover:text-green-600 hover:border hover:border-green-600 hover:border transition ease-linear delay-75
+}
+
+.btn_outline_success{
+
+    @apply bg-white border  border-green-600 text-green-600 p-2 rounded-xl hover:bg-green-600 hover:text-white transition ease-linear delay-75
+
+}
+.btn_outline_dark{
+
+    @apply bg-white border  border-black text-black p-2 rounded-xl hover:bg-black hover:text-white transition ease-linear delay-75
+
+}
+
+/* .btn_success{
+    @apply   bg-green-600 text-white
+}
+
+.btn_outline{
+    @apply p-2 rounded-xl  hover:border transition ease-linear delay-75 btn_success
+} */

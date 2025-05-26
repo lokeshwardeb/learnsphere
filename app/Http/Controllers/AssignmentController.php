@@ -20,15 +20,25 @@ class AssignmentController extends Controller
      */
     public function create()
     {
-        //
+        return view('teacher.create_assignment');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, Assignment $assignment)
     {
-        //
+        if(isset($_POST['create_assignment'])){
+            $assignment->assignment_title = $request->assign_title;
+            $assignment->assignment_desc = $request->assign_desc;
+            $assignment->assignment_starting_date = $request->assign_starting_date;
+            $assignment->assignment_submission_date = $request->assign_submission_date;
+
+            $assignment->save();
+
+            echo 'The post has been submitted';
+
+        }
     }
 
     /**
